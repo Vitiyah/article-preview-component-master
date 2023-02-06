@@ -46,11 +46,12 @@ Container CSS Styling
 }
 
 .container {
-  width: 60vw;
-  height: 40vh;
+  width: 65vw;
+  height: 42vh;
   background: var(--white);
   border-radius: 10px;
   display: flex;
+  overflow: hidden;
 }
 
 .img-container {
