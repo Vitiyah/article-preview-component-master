@@ -7,4 +7,9 @@ arrowBtn.addEventListener("click", () => {
   } else {
     shareInfo.classList.add("hidden");
   }
+  if (arrowBtn.classList.contains("arrow-act")) {
+    arrowBtn.classList.remove("arrow-act");
+  } else {
+    arrowBtn.classList.add("arrow-act");
+  }
 });

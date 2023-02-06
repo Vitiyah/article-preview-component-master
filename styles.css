@@ -22,6 +22,7 @@ Global CSS Styling
   box-sizing: border-box;
   outline: none;
   border: none;
+  text-decoration: none;
 }
 
 body {
@@ -142,13 +143,6 @@ Profile CSS Styling
   position: relative;
 }
 
-.profile-arrow:active {
-  background: var(--dark-blue);
-  background-image: url(./images/icon-share-white.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 /* ****************************************************************************
 Active CSS Styling
 **************************************************************************** */
@@ -189,7 +183,7 @@ Active CSS Styling
   justify-content: space-between;
 }
 
-.icons-container button {
+.icons-container a {
   background: none;
   font-size: 0.6rem;
   letter-spacing: 0.2rem;
@@ -207,4 +201,76 @@ Hidden Styling
 
 .hidden {
   display: none;
+}
+
+.arrow-act {
+  background: var(--dark-blue);
+  background-image: url(./images/icon-share-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.second {
+  display: none;
+}
+
+/* ****************************************************************************
+Media Query Styling
+**************************************************************************** */
+
+@media screen and (max-width: 550px) {
+  .container {
+    flex-direction: column;
+    width: 20rem;
+    height: 32rem;
+  }
+  .img-container {
+    background-color: red;
+    height: 35%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .text-container {
+    height: 65%;
+    width: 100%;
+  }
+  .inner-text h1 {
+    font-size: 1.2rem;
+  }
+  .inner-text p {
+    width: 93%;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  .share-link {
+    width: 20rem;
+    height: 4.5rem;
+    position: absolute;
+    transform: translateX(-80%);
+    right: -200%;
+    bottom: -0.9rem;
+    border-radius: 0 0 10px 10px;
+  }
+  .share-link::after {
+    display: none;
+  }
+  .icons-container {
+    width: 75%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .icons-container a {
+    font-size: 0.7rem;
+  }
+  .second {
+    display: block;
+    margin-left: 2rem;
+    margin-right: 0.2rem;
+    background: var(--dark-blue);
+    background-image: url(./images/icon-share-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
